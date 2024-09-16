@@ -1,0 +1,75 @@
+.div {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+@media (max-width: 800px) {
+  .div {
+    display: none;
+  }
+}
+
+.nameTag {
+  margin-top: 10px;
+  --width: 40px;
+  height: var(--width);
+  width: var(--width);
+  background: blueviolet;
+  border-radius: 50%;
+  margin-right: 7px;
+  animation: bounce 2s infinite;
+}
+
+.font {
+  font-size: xx-large;
+  background-color: rgb(14, 14, 14);
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid rgba(133, 133, 133, 0.179);
+  position: relative;
+  /* z-index: 1; */
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.font::after,
+.font::before {
+  border-radius: 15px;
+  content: "";
+  position: absolute;
+  height: 108%;
+  width: 102%;
+  background-image: conic-gradient(
+    from var(--angle),
+    rgb(202, 44, 8),
+    blue,
+    rgb(202, 44, 8)
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -2;
+  animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes bounce {
+  50% {
+    background-color: rgb(21, 8, 138);
+  }
+}

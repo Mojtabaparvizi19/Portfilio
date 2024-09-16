@@ -1,0 +1,100 @@
+.icon {
+  --wrapperWidth: 200px;
+  display: flex;
+  gap: 10px;
+  width: var(--wrapperWidth);
+  justify-content: space-between;
+}
+
+.iconBall {
+  --ball-size: 20px;
+  --duration: 4s;
+  --origin: -80px;
+  --gap: calc((var(--wrapperWidth) - var(--ball-size) * 5) / 4);
+  --moveBall: calc((var(--ball-size) + var(--gap)) * -1);
+  border-radius: 100%;
+  height: var(--ball-size);
+  width: var(--ball-size);
+}
+
+.iconBall:nth-child(1) {
+  background-color: red;
+  animation: moveX var(--duration) linear infinite alternate;
+}
+@keyframes moveX {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(calc(var(--wrapperWidth)));
+  }
+}
+
+.iconBall:nth-child(2) {
+  background-color: rgb(40, 138, 8);
+  animation: ball2 var(--duration) linear infinite alternate;
+}
+
+.iconBall:nth-child(3) {
+  background-color: rgb(5, 85, 125);
+  animation: ball3 var(--duration) linear infinite alternate;
+}
+.iconBall:nth-child(4) {
+  background-color: rgb(137, 6, 113);
+  animation: ball4 var(--duration) linear infinite alternate;
+}
+.iconBall:nth-child(5) {
+  background-color: rgb(100, 61, 5);
+  animation: ball5 var(--duration) linear infinite alternate;
+}
+
+@keyframes ball2 {
+  0% {
+    transform-origin: var(--origin);
+    transform: translateX(0) rotate(0);
+  }
+  25%,
+  100% {
+    transform-origin: center;
+    transform: translateX(var(--moveBall)) rotate(-90deg);
+  }
+}
+
+@keyframes ball3 {
+  0%,
+  25% {
+    transform-origin: var(--origin);
+    transform: translateX(0) rotate(0);
+  }
+  50%,
+  100% {
+    transform-origin: center;
+    transform: translateX(var(--moveBall)) rotate(-90deg);
+  }
+}
+
+@keyframes ball4 {
+  0%,
+  50% {
+    transform-origin: var(--origin);
+    transform: translateX(0) rotate(0);
+  }
+  75%,
+  100% {
+    transform-origin: center;
+    transform: translateX(var(--moveBall)) rotate(-90deg);
+  }
+}
+
+@keyframes ball5 {
+  0%,
+  75% {
+    transform-origin: var(--origin);
+    transform: translateX(0) rotate(0);
+  }
+
+  100% {
+    transform-origin: center;
+    transform: translateX(var(--moveBall)) rotate(-90deg);
+  }
+}

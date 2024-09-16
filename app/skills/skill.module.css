@@ -1,0 +1,22 @@
+.skillCardDev {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.skillDev {
+  /* background-color: #ff0000; */
+  width: 80%;
+  margin-top: 50px;
+}
+
+.item {
+  background-color: rgba(102, 102, 102, 0.258);
+  border-radius: 15px;
+  width: auto;
+  display: inline-block;
+  border: solid 1px rgba(187, 187, 187, 0.186);
+  margin: 12px;
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
