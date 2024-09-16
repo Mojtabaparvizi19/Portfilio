@@ -5,8 +5,6 @@ import descriptions from "../assets/descriptions";
 import SkillCard from "../components/skillCard/SkillCard";
 import MovingBall from "../components/Animation";
 
-import codePic from "../assets/pictures/web-programming.png";
-
 function SkillPage() {
   return (
     <main className={styles.main}>

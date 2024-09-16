@@ -3,7 +3,6 @@
 import Link from "next/link";
 import styles from "./projectCard.module.css";
 import ImageToAdd from "../Image/ImageToAdd";
-import { StaticImageData } from "next/image";
 import rawg from "../../assets/screenShots/rawg.png";
 import realEstate from "../../assets/screenShots/real estate.png";
 import weather from "../../assets/screenShots/weather.png";
@@ -23,16 +22,15 @@ export interface Link {
 }
 
 function ProjectCard({ webLink }: Props) {
-  console.log(webLink.id);
   return (
     <div className={styles.card}>
       <div>
-        <Link href={webLink.address}>
+        <Link target={"_blank"} href={webLink.address}>
           <ImageToAdd image={image[webLink.id - 1]} />
         </Link>
       </div>
       <div>
-        <h1>{webLink.name}</h1>
+        <h1 className={styles.title}>{webLink.name}</h1>
       </div>
     </div>
   );
