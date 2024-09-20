@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "./navbar.module.css";
-import { HStack } from "@chakra-ui/react";
 function NavBar() {
   return (
     <div>

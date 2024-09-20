@@ -14,10 +14,10 @@ function MainPageText() {
         Using React, TypeScript, Chakra, Bootstrap and TailwindCss
       </h2>
       <button
-        onClick={() => router.push("/")}
-        className="btn btn-success rounded-[120px] w-[150px] mt-10"
+        onClick={() => router.push("/contact")}
+        className={styles.hireButton}
       >
-        Hire Me
+        {`< Hire Me > `}
       </button>
     </div>
   );
