@@ -7,7 +7,7 @@
 
 .card {
   padding: 10px;
-  height: 400px;
+  height: 300px;
   width: 350px;
   background-color: rgb(57, 57, 57);
   margin: 10px;
@@ -60,4 +60,16 @@
 
 .body {
   margin-top: 20px;
+}
+
+.title {
+  background-color: rgba(36, 35, 35, 0.233);
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid rgba(85, 85, 85, 0.283);
+}
+
+.description {
+  margin-top: 50px;
+  padding: 10px;
 }

@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 347px;
+  left: 40%;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  10% {
+    width: 45px;
+    height: 35px;
+  }
+
+  25% {
+    height: 45px;
+    width: 35px;
+  }
+
+  50% {
+    background: rgb(197, 197, 197);
+    transform: translateY(-100px);
+    width: 40px;
+    height: 40px;
+  }
+
+  75% {
+    height: 45px;
+    width: 35px;
+  }
+
+  100% {
+  }
+}

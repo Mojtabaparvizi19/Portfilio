@@ -8,7 +8,7 @@
 
 .iconBall {
   --ball-size: 20px;
-  --duration: 4s;
+  --duration: 2s;
   --origin: -80px;
   --gap: calc((var(--wrapperWidth) - var(--ball-size) * 5) / 4);
   --moveBall: calc((var(--ball-size) + var(--gap)) * -1);

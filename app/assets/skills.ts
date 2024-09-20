@@ -17,6 +17,7 @@ const skills = [
   { id: 16, skill: "Front-End Development" },
   { id: 17, skill: "BackEnd Development" },
   { id: 18, skill: "Unit Testing" },
+  { id: 19, skill: "Prisma" },
 ];
 
 export default skills;

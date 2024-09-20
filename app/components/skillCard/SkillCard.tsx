@@ -1,23 +1,16 @@
-import { ReactNode } from "react";
 import styles from "./skillCard.module.css";
 
 interface Props {
   descriptions: { id: number; title: string; description: string };
-  children?: ReactNode;
 }
 
-function SkillCard({ descriptions, children }: Props) {
+function SkillCard({ descriptions }: Props) {
   return (
     <div className={styles.divGrid}>
       <div className={styles.card}>
-        {children}
         <div className={styles.body}></div>
-        <hr />
-        <br />
-        <h1>{descriptions.title}</h1>
-        <br />
-
-        <p>{descriptions.description}</p>
+        <h1 className={styles.title}>{descriptions.title}</h1>
+        <p className={styles.description}>{descriptions.description}</p>
       </div>
     </div>
   );
