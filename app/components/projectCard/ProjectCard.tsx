@@ -30,7 +30,9 @@ function ProjectCard({ webLink }: Props) {
         </Link>
       </div>
       <div>
-        <h1 className={styles.title}>{webLink.name}</h1>
+        <Link href={webLink.address}>
+          <h1 className={styles.title}> {`< ${webLink.name} >`}</h1>
+        </Link>
       </div>
     </div>
   );

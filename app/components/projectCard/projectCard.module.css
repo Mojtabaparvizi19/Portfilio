@@ -33,10 +33,19 @@
 .title {
   margin: 15px;
   border: 1px solid rgba(160, 160, 160, 0.168);
-  background-color: rgb(29, 27, 27);
+  background-color: rgb(204, 204, 204);
+  color: black;
+  font-weight: 400;
   border-radius: 10px;
   padding: 10px;
   position: relative;
+  font-size: 18px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.title:hover {
+  background-color: #1c1c1c;
+  color: white;
 }
 
 @property --angle {
@@ -50,12 +59,13 @@
   border-radius: 10px;
   content: "";
   position: absolute;
-  height: 108%;
-  width: 102%;
+  height: 109%;
+  width: 103%;
   background-image: conic-gradient(
     from var(--angle),
     rgb(33, 33, 33),
-    rgb(9, 0, 165),
+    rgb(165, 36, 0),
+    rgb(165, 36, 0),
     rgb(26, 26, 26)
   );
   top: 50%;
